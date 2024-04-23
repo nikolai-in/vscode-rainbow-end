@@ -11,6 +11,44 @@ export const languages: {
     neutralTokens: Array<string>;
   };
 } = {
+  pascal: {
+    caseSensitive: false,
+    ignoreInDelimiters: [
+      {
+        open: "{",
+        close: "}"
+      },
+      {
+        open: "'",
+        close: "'"
+      },
+      {
+        open: "//",
+        close: "\n"
+      }
+    ],
+    inlineOpenTokens: [],
+    openTokens: ["program", "procedure", "function", "begin", "case", "record", "try"],
+    closeTokens: ["end", "end.", "until"],
+    neutralTokens: ["else", "finally"],
+  },
+  innosetup: {
+    caseSensitive: false,
+    ignoreInDelimiters: [
+      {
+        open: "'",
+        close: "'"
+      },
+      {
+        open: "//",
+        close: "\n"
+      }
+    ],
+    inlineOpenTokens: [],
+    openTokens: ["program", "procedure", "function", "begin", "case", "record", "try"],
+    closeTokens: ["end", "end.", "until"],
+    neutralTokens: ["else", "finally"],
+  },
   ruby: {
     caseSensitive: true,
     ignoreInDelimiters: [
@@ -255,24 +293,24 @@ export const languages: {
   robot: {
     caseSensitive: true,
     ignoreInDelimiters: [
-        {
-            open: '"',
-            close: '"'
-        },
-        {
-            open: "#",
-            close: "\n"
-        },
-        {
-            open: "'",
-            close: "'"
-        }
+      {
+        open: '"',
+        close: '"'
+      },
+      {
+        open: "#",
+        close: "\n"
+      },
+      {
+        open: "'",
+        close: "'"
+      }
     ],
     inlineOpenTokens: [],
     openTokens: [
-        "IF",
-        "WHILE",
-        "CASE"
+      "IF",
+      "WHILE",
+      "CASE"
     ],
     closeTokens: ["END"],
     neutralTokens: ["ELSE IF", "ELSE"]
